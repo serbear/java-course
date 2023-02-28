@@ -1,49 +1,75 @@
-import java.util.Arrays;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
-//        EqualityPrinter equalityPrinter = new EqualityPrinter();
-//        equalityPrinter.printEqual(1, 1, 1);
-//        equalityPrinter.printEqual(1, 1, 2);
-//        equalityPrinter.printEqual(-1, -1, -1);
-//        equalityPrinter.printEqual(1, 2, 3);
+        // Ex 1. Sum Calculator
+        testSimpleCalculator();
+        // Ex 2. Carpet Cost Calculator
+        testCarpetCost();
+        // Ex 3. Complex Operations
+        testComplexOperations();
+        // Ex 4. Cylinder
+        testCylinder();
+        // Ex 5. Pool Area
+        testPoolArea();
+    }
 
+    private static void testPoolArea() {
+        Rectangle rectangle = new Rectangle(5, 10);
+        System.out.println("rectangle.width= " + rectangle.getWidth());
+        System.out.println("rectangle.length= " + rectangle.getLength());
+        System.out.println("rectangle.area= " + rectangle.getArea());
+        Cuboid cuboid = new Cuboid(5,10,5);
+        System.out.println("cuboid.width= " + cuboid.getWidth());
+        System.out.println("cuboid.length= " + cuboid.getLength());
+        System.out.println("cuboid.area= " + cuboid.getArea());
+        System.out.println("cuboid.height= " + cuboid.getHeight());
+        System.out.println("cuboid.volume= " + cuboid.getVolume());
+    }
 
+    private static void testCylinder() {
+        Circle circle = new Circle(3.75);
+        System.out.println("circle.radius= " + circle.getRadius());
+        System.out.println("circle.area= " + circle.getArea());
+        Cylinder cylinder = new Cylinder(5.55, 7.25);
+        System.out.println("cylinder.radius= " + cylinder.getRadius());
+        System.out.println("cylinder.height= " + cylinder.getHeight());
+        System.out.println("cylinder.area= " + cylinder.getArea());
+        System.out.println("cylinder.volume= " + cylinder.getVolume());
+    }
 
-//        OverloadedMethods overloadedMethods = new OverloadedMethods();
-//        // 13in= 33.02000cm
-//        double x1 = overloadedMethods.convertToCentimeters(13);
-//        // 68in= 172.7200cm
-//        double x2 = overloadedMethods.convertToCentimeters(5, 8);
-//
-//        System.out.println(x1);
-//        System.out.println(x2);
+    private static void testComplexOperations() {
+        ComplexNumber one = new ComplexNumber(1.0, 1.0);
+        ComplexNumber number = new ComplexNumber(2.5, -1.5);
+        one.add(1,1);
+        System.out.println("one.real= " + one.getReal());
+        System.out.println("one.imaginary= " + one.getImaginary());
+        one.subtract(number);
+        System.out.println("one.real= " + one.getReal());
+        System.out.println("one.imaginary= " + one.getImaginary());
+        number.subtract(one);
+        System.out.println("number.real= " + number.getReal());
+        System.out.println("number.imaginary= " + number.getImaginary());
+    }
 
-
-
-//        List<Double> data = Arrays.asList(
-//                AreaCalculator.area(5.0),
-//                AreaCalculator.area(-1),
-//                AreaCalculator.area(5.0, 4.0),
-//                AreaCalculator.area(-1.0, 4.0)
-//        );
-//        for (double n : data) System.out.println(n);
-
-
-
-
-        YearsAndDays.printYearsAndDays(525600);
-        YearsAndDays.printYearsAndDays(1051200);
-        YearsAndDays.printYearsAndDays(561600);
-
-        List<Boolean> results = Arrays.asList(
-                PlayingCat.isCatPlaying(true, 10),
-                PlayingCat.isCatPlaying(false, 36),
-                PlayingCat.isCatPlaying(false, 35)
-        );
-        for (boolean x : results) System.out.println(x);
-
+    private static void testSimpleCalculator() {
+        SimpleCalculator calculator = new SimpleCalculator();
+        calculator.setFirstNumber(5.0);
+        calculator.setSecondNumber(4);
+        System.out.println("add= " + calculator.getAdditionResult());
+        System.out.println("subtract= " + calculator.getSubtractionResult());
+        calculator.setFirstNumber(5.25);
+        calculator.setSecondNumber(0);
+        System.out.println("multiply= " + calculator.getMultiplicationResult());
+        System.out.println("divide= " + calculator.getDivisionResult());
+    }
+    private static void testCarpetCost() {
+        Carpet carpet = new Carpet(3.5);
+        Floor floor = new Floor(2.75, 4.0);
+        Calculator calculator = new Calculator(floor, carpet);
+        System.out.println("total= " + calculator.getTotalCost());
+        carpet = new Carpet(1.5);
+        floor = new Floor(5.4, 4.5);
+        calculator = new Calculator(floor, carpet);
+        System.out.println("total= " + calculator.getTotalCost());
     }
 
 }
