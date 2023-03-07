@@ -1,4 +1,3 @@
-import javax.rmi.ssl.SslRMIClientSocketFactory;
 
 public class Hamburger {
     String name;
