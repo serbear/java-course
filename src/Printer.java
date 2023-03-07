@@ -31,7 +31,6 @@ public class Printer {
 
         if (this.duplex) {
             System.out.println("Printing in duplex mode");
-//            pagesToPrint += this.pagesPrinted;
 
             // листов напечатано
 
@@ -39,7 +38,7 @@ public class Printer {
 
             if (pagesToPrint == 0) {
                 this.pagesPrinted += pages / 2;
-            }else {
+            } else {
                 pagesToPrint = (pages / 2) + 1;
                 this.pagesPrinted += pagesToPrint;
             }
