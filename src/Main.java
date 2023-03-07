@@ -1,6 +1,11 @@
 public class Main {
 
     public static void main(String[] args) {
+        /*
+        Ex 1. Class Association
+         */
+        /*
+
         Wall wall1 = new Wall("West");
         Wall wall2 = new Wall("East");
         Wall wall3 = new Wall("South");
@@ -16,5 +21,35 @@ public class Main {
 
         bedRoom.makeBed();
         bedRoom.getLamp().turnOn();
+         */
+
+        /*
+        Ex 2. Encapsulation
+         */
+        /*
+
+        Printer printer = new Printer(50, true);
+        System.out.println(printer.addToner(50));
+        System.out.println("initial page count = " + printer.getPagesPrinted());
+
+        int pagesPrinted = printer.printPages(6);
+        System.out.println(
+                "Pages printed was " + pagesPrinted
+                        + " new total print count for printer = "
+                        + printer.getPagesPrinted()
+        );
+
+        pagesPrinted = printer.printPages(7);
+        System.out.println(
+                "Pages printed was " + pagesPrinted
+                        + " new total print count for printer = "
+                        + printer.getPagesPrinted()
+        );
+         */
+
+        /*
+        Ex 3. Polymorphism
+         */
+
     }
 }
